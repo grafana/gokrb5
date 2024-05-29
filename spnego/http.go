@@ -14,13 +14,12 @@ import (
 	"net/url"
 	"strings"
 
-	"gopkg.in/jcmturner/goidentity.v3"
-	"gopkg.in/jcmturner/gokrb5.v7/client"
-	"gopkg.in/jcmturner/gokrb5.v7/gssapi"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/krberror"
-	"gopkg.in/jcmturner/gokrb5.v7/service"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
+	"github.com/grafana/gokrb5/client"
+	"github.com/grafana/gokrb5/gssapi"
+	"github.com/grafana/gokrb5/keytab"
+	"github.com/grafana/gokrb5/krberror"
+	"github.com/grafana/gokrb5/service"
+	"github.com/grafana/gokrb5/types"
 )
 
 // Client side functionality //

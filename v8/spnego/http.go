@@ -12,16 +12,16 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/grafana/gokrb5/v8/client"
+	"github.com/grafana/gokrb5/v8/credentials"
+	"github.com/grafana/gokrb5/v8/gssapi"
+	"github.com/grafana/gokrb5/v8/iana/nametype"
+	"github.com/grafana/gokrb5/v8/keytab"
+	"github.com/grafana/gokrb5/v8/krberror"
+	"github.com/grafana/gokrb5/v8/service"
+	"github.com/grafana/gokrb5/v8/types"
 	"github.com/jcmturner/gofork/encoding/asn1"
 	"github.com/jcmturner/goidentity/v6"
-	"github.com/jcmturner/gokrb5/v8/client"
-	"github.com/jcmturner/gokrb5/v8/credentials"
-	"github.com/jcmturner/gokrb5/v8/gssapi"
-	"github.com/jcmturner/gokrb5/v8/iana/nametype"
-	"github.com/jcmturner/gokrb5/v8/keytab"
-	"github.com/jcmturner/gokrb5/v8/krberror"
-	"github.com/jcmturner/gokrb5/v8/service"
-	"github.com/jcmturner/gokrb5/v8/types"
 )
 
 // Client side functionality //

@@ -13,13 +13,13 @@ import (
 	"net/http/httptest"
 	"os"
 
+	"github.com/grafana/gokrb5/v8/client"
+	"github.com/grafana/gokrb5/v8/config"
+	"github.com/grafana/gokrb5/v8/keytab"
+	"github.com/grafana/gokrb5/v8/service"
+	"github.com/grafana/gokrb5/v8/spnego"
+	"github.com/grafana/gokrb5/v8/test/testdata"
 	"github.com/jcmturner/goidentity/v6"
-	"github.com/jcmturner/gokrb5/v8/client"
-	"github.com/jcmturner/gokrb5/v8/config"
-	"github.com/jcmturner/gokrb5/v8/keytab"
-	"github.com/jcmturner/gokrb5/v8/service"
-	"github.com/jcmturner/gokrb5/v8/spnego"
-	"github.com/jcmturner/gokrb5/v8/test/testdata"
 )
 
 func main() {

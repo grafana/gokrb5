@@ -4,10 +4,10 @@ import (
 	"encoding/hex"
 	"testing"
 
+	"github.com/grafana/gokrb5/iana/nametype"
+	"github.com/grafana/gokrb5/test/testdata"
+	"github.com/grafana/gokrb5/types"
 	"github.com/stretchr/testify/assert"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/nametype"
-	"gopkg.in/jcmturner/gokrb5.v7/test/testdata"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
 )
 
 func TestParse(t *testing.T) {

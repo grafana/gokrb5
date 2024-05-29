@@ -5,17 +5,17 @@ import (
 	"testing"
 	"time"
 
+	"github.com/grafana/gokrb5/client"
+	"github.com/grafana/gokrb5/config"
+	"github.com/grafana/gokrb5/credentials"
+	"github.com/grafana/gokrb5/iana/errorcode"
+	"github.com/grafana/gokrb5/iana/flags"
+	"github.com/grafana/gokrb5/iana/nametype"
+	"github.com/grafana/gokrb5/keytab"
+	"github.com/grafana/gokrb5/messages"
+	"github.com/grafana/gokrb5/test/testdata"
+	"github.com/grafana/gokrb5/types"
 	"github.com/stretchr/testify/assert"
-	"gopkg.in/jcmturner/gokrb5.v7/client"
-	"gopkg.in/jcmturner/gokrb5.v7/config"
-	"gopkg.in/jcmturner/gokrb5.v7/credentials"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/errorcode"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/flags"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/nametype"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/messages"
-	"gopkg.in/jcmturner/gokrb5.v7/test/testdata"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
 )
 
 func TestVerifyAPREQ(t *testing.T) {
