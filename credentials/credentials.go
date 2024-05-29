@@ -7,6 +7,7 @@ import (
 	"github.com/grafana/gokrb5/iana/nametype"
 	"github.com/grafana/gokrb5/keytab"
 	"github.com/grafana/gokrb5/types"
+	uuid "github.com/hashicorp/go-uuid"
 )
 
 const (

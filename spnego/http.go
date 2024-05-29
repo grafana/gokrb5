@@ -20,6 +20,7 @@ import (
 	"github.com/grafana/gokrb5/krberror"
 	"github.com/grafana/gokrb5/service"
 	"github.com/grafana/gokrb5/types"
+	goidentity "gopkg.in/jcmturner/goidentity.v3"
 )
 
 // Client side functionality //
