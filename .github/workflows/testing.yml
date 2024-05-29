@@ -40,7 +40,7 @@ jobs:
           test -z $(gofmt -s -l -e $GO_FILES | tee /dev/fd/2 | xargs | sed 's/\s//g')
         id: gofmt
 
-      - name: Copy to gopkg.in in GOPATH
+      - name: Copy to github.com in GOPATH
         run: |
           mkdir -p /home/runner/go/src/github.com/grafana/gokrb5
           cp -r $GITHUB_WORKSPACE/*  /home/runner/go/src/github.com/grafana/gokrb5
