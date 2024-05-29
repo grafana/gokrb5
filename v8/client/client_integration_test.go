@@ -555,7 +555,11 @@ func TestClient_GetServiceTicket_Trusted_Resource_Domain(t *testing.T) {
 // There is only trust between parent domain (TEST.GOKRB5) and the service domain (RESDOM.GOKRB5).
 func TestClient_GetServiceTicket_Trusted_Resource_SubDomain(t *testing.T) {
 	test.Integration(t)
-	c, _ := config.NewFromString(testdata.KRB5_CONF)
+
+	c, err := config.NewFromString(testdata.KRB5_CONF)
+	if err != nil {
+		t.Fatalf("error reading krb5 config: %v\n", err)
+	}
 
 	addr := os.Getenv("TEST_KDC_ADDR")
 	if addr == "" {
@@ -569,7 +573,7 @@ func TestClient_GetServiceTicket_Trusted_Resource_SubDomain(t *testing.T) {
 		case "SUB.TEST.GOKRB5":
 			c.Realms[i].KDC = []string{addr + ":" + testdata.KDC_PORT_TEST_GOKRB5_SUB}
 		case "RESDOM.GOKRB5":
-			c.Realms[i].KDC = []string{addr + ":" + testdata.KDC_PORT_TEST_GOKRB5_SUB}
+			c.Realms[i].KDC = []string{addr + ":" + testdata.KDC_PORT_TEST_GOKRB5_RESDOM}
 		}
 	}
 
@@ -580,7 +584,7 @@ func TestClient_GetServiceTicket_Trusted_Resource_SubDomain(t *testing.T) {
 	c.LibDefaults.DefaultTGSEnctypeIDs = []int32{etypeID.ETypesByName["aes256-cts-hmac-sha1-96"]}
 
 	cl := client.NewWithPassword("testuser1", "SUB.TEST.GOKRB5", "passwordvalue", c)
-	err := cl.Login()
+	err = cl.Login()
 	if err != nil {
 		t.Fatalf("error on login: %v\n", err)
 	}
