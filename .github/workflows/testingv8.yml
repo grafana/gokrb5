@@ -54,6 +54,7 @@ jobs:
           sudo docker run -d -h kdc.test.gokrb5 -v /etc/localtime:/etc/localtime:ro -p 98:88 -p 98:88/udp --name krb5kdc-latest ghcr.io/grafana/gokrb5-test:kdc-latest
           sudo docker run -d -h kdc.resdom.gokrb5 -v /etc/localtime:/etc/localtime:ro -p 188:88 -p 188:88/udp --name krb5kdc-resdom ghcr.io/grafana/gokrb5-test:kdc-resdom
           sudo docker run -d -h kdc.test.gokrb5 -v /etc/localtime:/etc/localtime:ro -p 58:88 -p 58:88/udp --name krb5kdc-shorttickets ghcr.io/grafana/gokrb5-test:kdc-shorttickets
+          sudo docker run -d -h kdc.sub.test.gokrb5 -v /etc/localtime:/etc/localtime:ro -p 288:88 -p 288:88/udp --name krb5kdc-sub ghcr.io/grafana/gokrb5-test:kdc-sub
           sudo docker run -d --add-host host.test.gokrb5:127.0.0.88 -v /etc/localtime:/etc/localtime:ro -p 80:80 -p 443:443 --name gokrb5-http ghcr.io/grafana/gokrb5-test:http
           sleep 10 # Wait for the containers to be ready
           sudo sed -i 's/nameserver .*/nameserver '${DNS_IP}'/g' /etc/resolv.conf
