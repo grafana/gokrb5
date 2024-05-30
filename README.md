@@ -1,5 +1,17 @@
 # gokrb5
 
+> [!IMPORTANT]
+> This project is a fork of the original [gokrb5](https://github.com/jcmturner/gokrb5) project.
+> We forked it in order to fulfil our needs (see [#130](https://github.com/jcmturner/gokrb5/issues/130)).
+
+> [!WARNING]
+> Currently, it is no longer a replacement of the original [gokrb5](https://github.com/jcmturner/gokrb5) but its own Go module.
+> The latest changes introduced a few breaking changes over the latest version of [gokrb5@v8](https://github.com/jcmturner/gokrb5/tree/master/v8).
+
+> [!WARNING]
+> We don't have any plan nor time to actively maintain this fork beyond our own needs.
+> For general usage, please go to [gokrb5](https://github.com/jcmturner/gokrb5).
+
 It is recommended to use the latest version: [![Version](https://img.shields.io/github/release/jcmturner/gokrb5.svg)](https://github.com/jcmturner/gokrb5/releases)
 
 Development will be focused on the latest major version. New features will only be targeted at this version.
