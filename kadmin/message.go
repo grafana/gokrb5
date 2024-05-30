@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"math"
 
-	"gopkg.in/jcmturner/gokrb5.v7/messages"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
+	"github.com/grafana/gokrb5/messages"
+	"github.com/grafana/gokrb5/types"
 )
 
 const (

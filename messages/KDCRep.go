@@ -7,17 +7,17 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/grafana/gokrb5/config"
+	"github.com/grafana/gokrb5/credentials"
+	"github.com/grafana/gokrb5/crypto"
+	"github.com/grafana/gokrb5/iana/asnAppTag"
+	"github.com/grafana/gokrb5/iana/flags"
+	"github.com/grafana/gokrb5/iana/keyusage"
+	"github.com/grafana/gokrb5/iana/msgtype"
+	"github.com/grafana/gokrb5/iana/patype"
+	"github.com/grafana/gokrb5/krberror"
+	"github.com/grafana/gokrb5/types"
 	"github.com/jcmturner/gofork/encoding/asn1"
-	"gopkg.in/jcmturner/gokrb5.v7/config"
-	"gopkg.in/jcmturner/gokrb5.v7/credentials"
-	"gopkg.in/jcmturner/gokrb5.v7/crypto"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/asnAppTag"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/flags"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/keyusage"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/msgtype"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/patype"
-	"gopkg.in/jcmturner/gokrb5.v7/krberror"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
 )
 
 type marshalKDCRep struct {

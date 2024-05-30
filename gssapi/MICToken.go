@@ -8,9 +8,9 @@ import (
 	"errors"
 	"fmt"
 
-	"gopkg.in/jcmturner/gokrb5.v7/crypto"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/keyusage"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
+	"github.com/grafana/gokrb5/crypto"
+	"github.com/grafana/gokrb5/iana/keyusage"
+	"github.com/grafana/gokrb5/types"
 )
 
 // RFC 4121, section 4.2.6.1

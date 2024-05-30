@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/grafana/gokrb5/asn1tools"
+	"github.com/grafana/gokrb5/crypto"
+	"github.com/grafana/gokrb5/iana"
+	"github.com/grafana/gokrb5/iana/asnAppTag"
+	"github.com/grafana/gokrb5/iana/errorcode"
+	"github.com/grafana/gokrb5/iana/keyusage"
+	"github.com/grafana/gokrb5/iana/msgtype"
+	"github.com/grafana/gokrb5/keytab"
+	"github.com/grafana/gokrb5/krberror"
+	"github.com/grafana/gokrb5/types"
 	"github.com/jcmturner/gofork/encoding/asn1"
-	"gopkg.in/jcmturner/gokrb5.v7/asn1tools"
-	"gopkg.in/jcmturner/gokrb5.v7/crypto"
-	"gopkg.in/jcmturner/gokrb5.v7/iana"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/asnAppTag"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/errorcode"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/keyusage"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/msgtype"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/krberror"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
 )
 
 type marshalAPReq struct {

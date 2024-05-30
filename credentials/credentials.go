@@ -4,10 +4,10 @@ package credentials
 import (
 	"time"
 
-	"github.com/hashicorp/go-uuid"
-	"gopkg.in/jcmturner/gokrb5.v7/iana/nametype"
-	"gopkg.in/jcmturner/gokrb5.v7/keytab"
-	"gopkg.in/jcmturner/gokrb5.v7/types"
+	"github.com/grafana/gokrb5/iana/nametype"
+	"github.com/grafana/gokrb5/keytab"
+	"github.com/grafana/gokrb5/types"
+	uuid "github.com/hashicorp/go-uuid"
 )
 
 const (
